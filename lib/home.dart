@@ -55,13 +55,13 @@ class _HomeState extends State<Home> {
     Weekday(6, "Sun"),
   ];
 
-  // Build activity types list
+
   List<ActivityType> activityList = [
-    ActivityType(0, Icons.people),          // Meeting
-    ActivityType(1, Icons.menu_book),       // Study
-    ActivityType(2, Icons.work),            // Work
-    ActivityType(3, Icons.restaurant),      // Food
-    ActivityType(4, Icons.fitness_center),  // Exercise
+    ActivityType(0, Icons.people),
+    ActivityType(1, Icons.menu_book),
+    ActivityType(2, Icons.work),
+    ActivityType(3, Icons.restaurant),
+    ActivityType(4, Icons.fitness_center),
   ];
 
 
@@ -130,7 +130,7 @@ class _HomeState extends State<Home> {
           const SizedBox(height: 25),
 
 
-          // ⭐🤣 WEEKDAY RADIO ROW (generated from class)
+          //  📃📃WEEKDAY RADIO  from class
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: weekdayList.map((weekday) {
@@ -153,7 +153,7 @@ class _HomeState extends State<Home> {
 
           const SizedBox(height: 25),
 
-          // START TIME
+
           const Text(
             "Start Time:",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -176,7 +176,7 @@ class _HomeState extends State<Home> {
 
           const SizedBox(height: 25),
 
-          // END TIME
+
           const Text(
             "End Time:",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -199,7 +199,7 @@ class _HomeState extends State<Home> {
 
           const SizedBox(height: 35),
 
-          // ACTIVITY TYPE (ICONS)
+
           const Text(
             "Select Activity Type:",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -207,7 +207,7 @@ class _HomeState extends State<Home> {
 
           const SizedBox(height: 10),
 
-          // ⭐ ACTIVITY ICONS RADIO ROW (generated from class)
+          // ACTIVITY ICONS RADIO
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: activityList.map((activity) {
@@ -230,7 +230,7 @@ class _HomeState extends State<Home> {
 
           const SizedBox(height: 25),
 
-          // CREATE ACTIVITY BUTTON
+
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.lightBlueAccent,

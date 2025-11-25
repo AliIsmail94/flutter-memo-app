@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart';   // to access activitiesPerDay and weekdays
+import 'home.dart';
 
 class MemosPage extends StatefulWidget {
   const MemosPage({super.key});
@@ -10,7 +10,7 @@ class MemosPage extends StatefulWidget {
 
 class _MemosPageState extends State<MemosPage> {
 
-  // weekdays list (same order as activitiesPerDay)
+
   List<String> weekdays = [
     "Monday", "Tuesday", "Wednesday",
     "Thursday", "Friday", "Saturday", "Sunday"
@@ -41,7 +41,7 @@ class _MemosPageState extends State<MemosPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
 
-                // ⭐ BLUE BUBBLE WITH DAY NAME
+                //day 💧💧💧
                 Container(
                   padding: const EdgeInsets.symmetric(
                       vertical: 6, horizontal: 14),
@@ -60,7 +60,7 @@ class _MemosPageState extends State<MemosPage> {
 
                 const SizedBox(height: 12),
 
-                // ⭐ ACTIVITIES OF THIS DAY
+                // 🤣🤣🤣
                 ...activitiesPerDay[index].map((act) {
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 8),
@@ -81,12 +81,7 @@ class _MemosPageState extends State<MemosPage> {
                   );
                 }).toList(),
 
-                // ⭐ If no activities
-                // if (activitiesPerDay[index].isEmpty)
-                //   const Text(
-                //     "No activities",
-                //     style: TextStyle(color: Colors.black54),
-                //   ),
+
               ],
             ),
           );
@@ -107,7 +102,7 @@ class _MemosPageState extends State<MemosPage> {
             ),
             IconButton(
               icon: const Icon(Icons.list, color: Colors.white),
-              onPressed: () {},  // already here
+              onPressed: () {},
             ),
           ],
         ),
