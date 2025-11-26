@@ -280,16 +280,40 @@ class _HomeState extends State<Home> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            IconButton(
-              icon: const Icon(Icons.home, color: Colors.white),
-              onPressed: () => _openHome(context),
+
+            // HOME TAB
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.home, color: Colors.white),
+                  onPressed: () => _openHome(context),
+                ),
+                const Text(
+                  "Home",
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ],
             ),
-            IconButton(
-              icon: const Icon(Icons.list, color: Colors.white),
-              onPressed: () => _openMemos(context),
+
+            // MEMO TAB
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.list, color: Colors.white),
+                  onPressed: () => _openMemos(context),
+                ),
+                const Text(
+                  "Memo",
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ],
             ),
+
           ],
         ),
+
       ),
     );
   }

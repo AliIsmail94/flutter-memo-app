@@ -16,11 +16,19 @@ class _MemosPageState extends State<MemosPage> {
     "Thursday", "Friday", "Saturday", "Sunday"
   ];
 
+  void _openHome(BuildContext context) { Navigator.of(context).push(
+    MaterialPageRoute(builder: (c) => const Home()),
+  );}
+
+  void _openMemos(BuildContext context) {
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Memo List"),
+        title: const Text("Memo List",style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.lightBlueAccent,
         centerTitle: true,
       ),
@@ -81,6 +89,7 @@ class _MemosPageState extends State<MemosPage> {
                   );
                 }).toList(),
 
+                if (activitiesPerDay[index].isEmpty) const Text( "No activities", style: TextStyle(color: Colors.black54), ),
 
               ],
             ),
@@ -94,19 +103,42 @@ class _MemosPageState extends State<MemosPage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            IconButton(
-              icon: const Icon(Icons.home, color: Colors.white),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+
+            // HOME TAB
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.home, color: Colors.white),
+                  onPressed: () => _openHome(context),
+                ),
+                const Text(
+                  "Home",
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ],
             ),
-            IconButton(
-              icon: const Icon(Icons.list, color: Colors.white),
-              onPressed: () {},
+
+            // MEMO TAB
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.list, color: Colors.white),
+                  onPressed: () => _openMemos(context),
+                ),
+                const Text(
+                  "Memo",
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ],
             ),
+
           ],
         ),
       ),
+
+
     );
   }
 }
